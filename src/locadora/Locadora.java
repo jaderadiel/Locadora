@@ -53,7 +53,27 @@ public class Locadora {
         locacao.addItem(new Item("3", filmeSuperLancamento, bluray));
         locacao.imprime();
         
+        Locacao locacao1 = new Locacao("Teste exclusão item 1");
+        locacao1.addItem(new Item("1", filmeCatalogo, vhs));
+        locacao1.addItem(new Item("2", filmeLancamento, dvd));
+        locacao1.addItem(new Item("3", filmeSuperLancamento, bluray));
+        locacao1.removeItem(0);
+        locacao1.imprime();
         
+        Locacao locacao2 = new Locacao("Teste exclusão item 3");
+        locacao2.addItem(new Item("1", filmeCatalogo, vhs));
+        locacao2.addItem(new Item("2", filmeLancamento, dvd));
+        locacao2.addItem(new Item("3", filmeSuperLancamento, bluray));
+        locacao2.removeItem(locacao2.getQtdItens() - 1);
+        locacao2.imprime();
+        
+        
+        Locacao locacao3 = new Locacao("Teste exclusão item 2");
+        locacao3.addItem(new Item("1", filmeCatalogo, vhs));
+        locacao3.addItem(new Item("2", filmeLancamento, dvd));
+        locacao3.addItem(new Item("3", filmeSuperLancamento, bluray));
+        locacao3.removeItem(1);
+        locacao3.imprime();
     }
     
 }
